@@ -1,0 +1,115 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms Demo</title>
+</head>
+<body>
+  <h1>Forms Demo</h1>
+  
+  <button>Formun dışında</button>
+
+  <form action="/food">
+
+    <button type="button">Lütfen bu formu gönderme</button>
+    
+    <label for="username">Kullanıcı adı giriniz:</label>
+    <input id='username' type="text" placeholder='username' name="username">
+    
+    <label for="password">Şifre giriniz:</label>
+    <input id='password' type="password" placeholder='password' name="password">
+    
+    <button>Gönder</button>
+
+    <label for="color">Renk seçiniz:</label>
+    <input id='color' type="color" name="color">
+    
+    <label for="number">Sayı giriniz:</label>
+    <input id='number' type="number" placeholder='number' min="1" max="10">  
+    <!-- inputa min ve max burada verilebilir -->
+    
+    <button>Gönder!!!!</button>
+
+    <input type="submit" value="Tıklayın">
+    
+  </form>
+
+<hr>
+
+<!-- Reddit'te arama yap -->
+<form action="https://www.reddit.com/search">
+  <label for="search">Search Reddit</label>
+  <input type="text" name="q" id="search">
+  <button>Reditte ara</button>
+</form>
+
+<!-- Google'da arama yap -->
+<form action="https://www.google.com/search">
+  <label for="search">Search Google</label>
+  <input type="text" name="q" id="search">
+  <button>Googleda ara</button>
+</form>
+
+<!-- Youtube'da arama yap -->
+<form action="https://www.youtube.com/results">
+  <label for="search">Search Youtube</label>
+  <input type="text" name="search_query" id="result">
+  <button>Youtubeda ara</button>
+</form>
+
+<h2>Daha fazla input çeşidi</h2>
+<!-- input önce koyulursa kutu solda olur, input labeldan sonra olursa sağda olur -->
+<form action="/birds">
+  <input type="checkbox" name="tos" id="agree" checked>
+  <label for="agree">Kabul ediyorum</label>
+  <p>
+    <label for="xs">XS:</label>
+    <input type="radio" name="size" id="xs" value="xs">
+
+    <label for="s">S:</label>    
+    <input type="radio" name="size" id="s" value="s">
+
+    <label for="m">M:</label>        
+    <input type="radio" name="size" id="m" value="m">
+    <!-- üçünün de aynı name sahip olması gerek anca öyle birini seçebiliriz. -->
+    <!-- radio butonunda sadece bir adet seçilir -->
+    <!-- value ile sunucuya ne istediğimizi bildirir, yoksa sadece seçildiğini bildirir-on- -->
+  </p>
+  <p>
+    <label for="animal">Favori hayvanınızı seçin</label>
+    <select name="animal" id="animal">
+      <option value="">Seçiniz</option>
+      <!-- valuesu boş olarak atarsak sadece bilgi vermek için -->
+      <option value="fish">Balık</option>
+      <option value="bird">Kuş</option>
+      <option value="cat">Kedi</option>
+    </select>
+  </p>
+  <p>
+    <label for="cheese">Peynir miktarı</label>
+    <input type="range" name="cheese_level" id="cheese" min="1" max="10">
+  </p>
+  <p>
+    <label for="note">Özel istek:</label>
+    <br>
+    <textarea name="note" id="note" cols="30" rows="10" placeholder="Buraya isteklerinizi yazınız"></textarea>
+  </p>
+  <button>Yolla</button>
+</form>
+
+  <h2>Validations</h2>
+    <form action="/dummy">
+ <p> 
+   
+   <label for="first">İsim giriniz</label>
+   <input type="text" name="first" id="first" required minlength="3" maxlength="15">
+  </p>
+    <label for="password">Şifre giriniz</label>
+      <input type="password" id="password" required >
+      <button>Submit</button>
+    </form>
+
+</body>
+</html>
